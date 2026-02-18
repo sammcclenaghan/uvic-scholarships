@@ -152,72 +152,109 @@ export function ScholarshipSearch({
 
   return (
     <div className="flex h-dvh flex-col overflow-hidden bg-gray-50">
-      <header className="sticky top-0 z-30 flex h-14 w-full shrink-0 items-center gap-4 border-b border-gray-200 bg-white/90 px-5 backdrop-blur">
-        <a href="/" className="shrink-0 text-[15px] font-semibold tracking-[-0.01em] text-gray-950">
-          Scholarships
-        </a>
+      <header className="sticky top-0 z-30 w-full shrink-0 border-b border-gray-200 bg-white/90 backdrop-blur">
+        <div className="flex h-14 items-center gap-4 px-5">
+          <a href="/" className="shrink-0 text-[15px] font-semibold tracking-[-0.01em] text-gray-950">
+            Scholarships
+          </a>
 
-        <div className="min-w-0 flex-1">
-          <div className="relative mx-auto max-w-xl">
-            <label
-              htmlFor="search-header"
-              className="absolute inset-y-0 left-0 flex items-center pl-3"
-            >
-              <svg
-                className="h-4 w-4 text-gray-400"
-                viewBox="0 0 16 16"
-                fill="currentColor"
+          <div className="hidden min-w-0 flex-1 sm:block">
+            <div className="relative mx-auto max-w-xl">
+              <label
+                htmlFor="search-header"
+                className="absolute inset-y-0 left-0 flex items-center pl-3"
               >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M1.5 6.5C1.5 3.73858 3.73858 1.5 6.5 1.5C9.26142 1.5 11.5 3.73858 11.5 6.5C11.5 9.26142 9.26142 11.5 6.5 11.5C3.73858 11.5 1.5 9.26142 1.5 6.5ZM6.5 0C2.91015 0 0 2.91015 0 6.5C0 10.0899 2.91015 13 6.5 13C8.02469 13 9.42677 12.475 10.5353 11.596L13.9697 15.0303L14.5 15.5607L15.5607 14.5L15.0303 13.9697L11.596 10.5353C12.475 9.42677 13 8.02469 13 6.5C13 2.91015 10.0899 0 6.5 0Z"
-                />
-              </svg>
-            </label>
-            <input
-              ref={inputRef}
-              id="search-header"
-              type="search"
-              value={searchInput}
-              onChange={(e) => {
-                setSearchInput(e.target.value);
-              }}
-              placeholder="Search scholarships..."
-              autoFocus
-              autoComplete="off"
-              autoCorrect="off"
-              spellCheck={false}
-              className="block w-full rounded-md border border-gray-200 bg-white py-1.5 pl-9 pr-8 text-sm tracking-[-0.01em] text-gray-950 outline-none placeholder:text-gray-400"
-            />
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2">
-              <kbd className="rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 font-mono text-[10px] text-gray-400">
-                /
-              </kbd>
+                <svg
+                  className="h-4 w-4 text-gray-400"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M1.5 6.5C1.5 3.73858 3.73858 1.5 6.5 1.5C9.26142 1.5 11.5 3.73858 11.5 6.5C11.5 9.26142 9.26142 11.5 6.5 11.5C3.73858 11.5 1.5 9.26142 1.5 6.5ZM6.5 0C2.91015 0 0 2.91015 0 6.5C0 10.0899 2.91015 13 6.5 13C8.02469 13 9.42677 12.475 10.5353 11.596L13.9697 15.0303L14.5 15.5607L15.5607 14.5L15.0303 13.9697L11.596 10.5353C12.475 9.42677 13 8.02469 13 6.5C13 2.91015 10.0899 0 6.5 0Z"
+                  />
+                </svg>
+              </label>
+              <input
+                ref={inputRef}
+                id="search-header"
+                type="search"
+                value={searchInput}
+                onChange={(e) => {
+                  setSearchInput(e.target.value);
+                }}
+                placeholder="Search scholarships..."
+                autoFocus
+                autoComplete="off"
+                autoCorrect="off"
+                spellCheck={false}
+                className="block w-full rounded-md border border-gray-200 bg-white py-1.5 pl-9 pr-8 text-sm tracking-[-0.01em] text-gray-950 outline-none placeholder:text-gray-400"
+              />
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2">
+                <kbd className="rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 font-mono text-[10px] text-gray-400">
+                  /
+                </kbd>
+              </div>
             </div>
+          </div>
+
+          <div className="ml-auto flex shrink-0 items-center gap-3">
+            <a
+              href="/search"
+              className="shrink-0 rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-[13px] font-medium text-gray-700 transition-colors hover:border-gray-400 hover:text-gray-950"
+            >
+              Browse all
+            </a>
+            <a
+              href="https://www.uvic.ca/scholarships/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden shrink-0 items-center gap-1 text-[13px] text-gray-400 transition-colors hover:text-gray-900 sm:inline-flex"
+            >
+              UVic
+              <svg className="h-3 w-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M3.5 3H9V8.5M9 3L3 9" />
+              </svg>
+            </a>
           </div>
         </div>
 
-        <div className="flex shrink-0 items-center gap-3">
-          <a
-            href="/search"
-            className="shrink-0 rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-[13px] font-medium text-gray-700 transition-colors hover:border-gray-400 hover:text-gray-950"
-          >
-            Browse all
-          </a>
-          <a
-            href="https://www.uvic.ca/scholarships/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden shrink-0 items-center gap-1 text-[13px] text-gray-400 transition-colors hover:text-gray-900 sm:inline-flex"
-          >
-            UVic
-            <svg className="h-3 w-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M3.5 3H9V8.5M9 3L3 9" />
-            </svg>
-          </a>
-        </div>
       </header>
+
+      <div className="border-b border-gray-200 bg-white/80 px-5 py-3 sm:hidden">
+        <div className="relative">
+          <label
+            htmlFor="search-header-mobile"
+            className="absolute inset-y-0 left-0 flex items-center pl-3"
+          >
+            <svg
+              className="h-4 w-4 text-gray-400"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M1.5 6.5C1.5 3.73858 3.73858 1.5 6.5 1.5C9.26142 1.5 11.5 3.73858 11.5 6.5C11.5 9.26142 9.26142 11.5 6.5 11.5C3.73858 11.5 1.5 9.26142 1.5 6.5ZM6.5 0C2.91015 0 0 2.91015 0 6.5C0 10.0899 2.91015 13 6.5 13C8.02469 13 9.42677 12.475 10.5353 11.596L13.9697 15.0303L14.5 15.5607L15.5607 14.5L15.0303 13.9697L11.596 10.5353C12.475 9.42677 13 8.02469 13 6.5C13 2.91015 10.0899 0 6.5 0Z"
+              />
+            </svg>
+          </label>
+          <input
+            id="search-header-mobile"
+            type="search"
+            value={searchInput}
+            onChange={(e) => {
+              setSearchInput(e.target.value);
+            }}
+            placeholder="Search scholarships..."
+            autoComplete="off"
+            autoCorrect="off"
+            spellCheck={false}
+            className="block w-full rounded-lg border border-gray-200 bg-white py-2 pl-9 pr-3 text-sm tracking-[-0.01em] text-gray-950 outline-none placeholder:text-gray-400"
+          />
+        </div>
+      </div>
 
       <div className="border-b border-gray-200 bg-white/80 px-5 py-2.5 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center gap-2">
