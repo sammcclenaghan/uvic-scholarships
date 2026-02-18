@@ -75,6 +75,18 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      <footer className="py-5 text-center text-[12px] text-gray-400">
+        Built by{" "}
+        <a
+          href="https://smccl.ca"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline decoration-gray-300 underline-offset-2 transition-colors hover:text-gray-600 hover:decoration-gray-400"
+        >
+          smccl.ca
+        </a>
+      </footer>
     </div>
   );
 }
