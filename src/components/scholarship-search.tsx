@@ -48,6 +48,9 @@ export function ScholarshipSearch({
         e.preventDefault();
         inputRef.current?.focus();
       }
+      if (e.key === "Escape" && document.activeElement === inputRef.current) {
+        inputRef.current?.blur();
+      }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -189,11 +192,11 @@ export function ScholarshipSearch({
                 autoComplete="off"
                 autoCorrect="off"
                 spellCheck={false}
-                className="block w-full rounded-md border border-gray-200 bg-white py-1.5 pl-9 pr-8 text-sm tracking-[-0.01em] text-gray-950 outline-none placeholder:text-gray-400 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 dark:placeholder:text-gray-500"
+                className="block w-full rounded-lg border border-gray-300 bg-white py-1.5 pl-9 pr-12 text-sm tracking-[-0.01em] text-gray-950 outline-none placeholder:text-gray-400 hover:border-[#A8A8A8] focus:border-[#A8A8A8] dark:border-gray-600 dark:bg-gray-900 dark:text-gray-100 dark:placeholder:text-gray-500 dark:focus:border-white"
               />
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2">
+              <div className="absolute inset-y-0 right-0 flex items-center pr-3">
                 <kbd className="rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 font-mono text-[10px] text-gray-400 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-500">
-                  /
+                  Esc
                 </kbd>
               </div>
             </div>
