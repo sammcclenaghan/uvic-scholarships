@@ -1,0 +1,257 @@
+{
+  "filters": [
+    {
+      "label": "Search",
+      "type": "keyword",
+      "values": []
+    },
+    {
+      "label": "Awards type",
+      "type": "dropdown",
+      "values": [
+        "Entrance scholarship",
+        "In-course scholarships for continuing students",
+        "Travel awards for continuing students"
+      ]
+    },
+    {
+      "label": "Application required",
+      "type": "dropdown",
+      "values": [
+        {
+          "value": "Not Required",
+          "text": "No"
+        },
+        {
+          "value": "Required",
+          "text": "Yes"
+        }
+      ]
+    },
+    {
+      "label": "Renewable",
+      "type": "dropdown",
+      "values": [
+        "No",
+        "Yes"
+      ]
+    },
+    {
+      "label": "Student focus",
+      "type": "dropdown",
+      "values": [
+        "Athletics",
+        "Gender-based",
+        "Indigenous students",
+        "International students",
+        "Refugee/Protected Person",
+        "Students with disabilities",
+        "Visible minorities"
+      ]
+    },
+    {
+      "label": "Department",
+      "type": "dropdown",
+      "values": [
+        {
+          "value": "Available to all",
+          "text": "Available to all"
+        },
+        {
+          "value": "Anthropology",
+          "text": "Anthropology"
+        },
+        {
+          "value": "Art History and Visual Studies",
+          "text": "Art History and Visual Studies"
+        },
+        {
+          "value": "Biochemistry and Microbiology",
+          "text": "Biochemistry and Microbiology"
+        },
+        {
+          "value": "Biology",
+          "text": "Biology"
+        },
+        {
+          "value": "Business",
+          "text": "Business"
+        },
+        {
+          "value": "CanAssist",
+          "text": "CanAssist"
+        },
+        {
+          "value": "Chemistry",
+          "text": "Chemistry"
+        },
+        {
+          "value": "Child and Youth Care",
+          "text": "Child and Youth Care"
+        },
+        {
+          "value": "Computer Science",
+          "text": "Computer Science"
+        },
+        {
+          "value": "Earth and Ocean Sciences",
+          "text": "Earth and Ocean Sciences"
+        },
+        {
+          "value": "Economics",
+          "text": "Economics"
+        },
+        {
+          "value": "Education",
+          "text": "Education"
+        },
+        {
+          "value": "Engineering",
+          "text": "Engineering"
+        },
+        {
+          "value": "English",
+          "text": "English"
+        },
+        {
+          "value": "Environmental Studies",
+          "text": "Environmental Studies"
+        },
+        {
+          "value": "Exercise Science Physical and Health Education",
+          "text": "Exercise Science, Physical and Health Education"
+        },
+        {
+          "value": "Fine Arts",
+          "text": "Fine Arts"
+        },
+        {
+          "value": "French",
+          "text": "French"
+        },
+        {
+          "value": "Gender Studies",
+          "text": "Gender Studies"
+        },
+        {
+          "value": "Geography",
+          "text": "Geography"
+        },
+        {
+          "value": "Germanic and Slavic Studies",
+          "text": "Germanic and Slavic Studies"
+        },
+        {
+          "value": "Greek and Roman Studies",
+          "text": "Greek and Roman Studies"
+        },
+        {
+          "value": "Health",
+          "text": "Health"
+        },
+        {
+          "value": "Health Information Science",
+          "text": "Health Information Science"
+        },
+        {
+          "value": "Hispanic and Italian Studies",
+          "text": "Hispanic and Italian Studies"
+        },
+        {
+          "value": "History",
+          "text": "History"
+        },
+        {
+          "value": "Human and Social Development",
+          "text": "Human and Social Development"
+        },
+        {
+          "value": "Humanities",
+          "text": "Humanities"
+        },
+        {
+          "value": "Law",
+          "text": "Law"
+        },
+        {
+          "value": "Linguistics",
+          "text": "Linguistics"
+        },
+        {
+          "value": "Mathematics and Statistics",
+          "text": "Mathematics and Statistics"
+        },
+        {
+          "value": "Medieval Studies",
+          "text": "Medieval Studies"
+        },
+        {
+          "value": "Music",
+          "text": "Music"
+        },
+        {
+          "value": "Nursing",
+          "text": "Nursing"
+        },
+        {
+          "value": "Pacific and Asian Studies",
+          "text": "Pacific and Asian Studies"
+        },
+        {
+          "value": "Philosophy",
+          "text": "Philosophy"
+        },
+        {
+          "value": "Physics and Astronomy",
+          "text": "Physics and Astronomy"
+        },
+        {
+          "value": "Political Science",
+          "text": "Political Science"
+        },
+        {
+          "value": "Psychology",
+          "text": "Psychology"
+        },
+        {
+          "value": "Public Administration",
+          "text": "Public Administration"
+        },
+        {
+          "value": "Public Health and Social Policy",
+          "text": "Public Health and Social Policy"
+        },
+        {
+          "value": "Science",
+          "text": "Science"
+        },
+        {
+          "value": "Social Sciences",
+          "text": "Social Sciences"
+        },
+        {
+          "value": "Social Work",
+          "text": "Social Work"
+        },
+        {
+          "value": "Sociology",
+          "text": "Sociology"
+        },
+        {
+          "value": "Theatre",
+          "text": "Theatre"
+        },
+        {
+          "value": "Visual Arts",
+          "text": "Visual Arts"
+        },
+        {
+          "value": "Writing",
+          "text": "Writing"
+        }
+      ]
+    }
+  ],
+  "total": 1357,
+  "lastUpdated": "2026-02-17T06:35:13.879Z"
+}

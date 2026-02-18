@@ -1,0 +1,103 @@
+You are a data extraction assistant. Given the following scholarship descriptions from the University of Victoria, extract structured information for each one.
+
+For EACH scholarship, return a JSON object with these fields:
+- "id": the scholarship id (pass through from input)
+- "documents": string array of required documents (e.g. ["Letter of reference (400 words max)", "Cover letter (500 words max)", "Coach's reference letter", "Practica reports"]). If no specific documents are mentioned, return an empty array [].
+- "whereToApply": one of: "UVic Online Tools", "Faculty website", "Department", "Automatic - no application needed", or a specific description if mentioned
+- "applyUrl": a direct URL if one is mentioned in the description, otherwise null
+- "eligibilitySummary": a 1-2 sentence plain-English summary of who qualifies (year, program, criteria)
+- "financialNeed": boolean, true if financial need is mentioned as a preference or requirement
+- "yearRequirement": string like "3rd or 4th year", "entering final year", "2nd year", etc. or null if not specified
+
+IMPORTANT:
+- Return ONLY a valid JSON array, no markdown fencing, no explanation
+- If the scholarship says "No application required", set whereToApply to "Automatic - no application needed" and documents to []
+- Be precise about document requirements - only include what is explicitly mentioned
+
+Here are the scholarships:
+
+[
+  {
+    "id": 1350,
+    "name": "Working for a Better World Award",
+    "description": "One or more awards, of up to $8,000 each, will be given to undergraduate students in the Bachelor of Commerce program who have secured an approved Working for a Better World designated co-op term (Fall, Spring or Summer). The Working for a Better World award is intended to create opportunities for students to complete a co-op term with an organization that is contributing to social and/or environmental impact and who would normally be unable to fund the co-op through other means. The position must involve a high degree of social and/or environmental impact and the student must utilize their business knowledge and acumen to add value to the organization. Part-time co-ops and part-time students (registered in a minimum of 4.5 units) are eligible for this opportunity. \n\nRecipients travelling to an international location for the co-op opportunity may be eligible for up to $2,000 in additional funding to assist with travel expenses. Students who apply to a Working for a Better World Co-op opportunity will automatically be considered for this award.  Approval of the recipient will be made by the Senate Committee on Awards upon the recommendation of the Peter B. Gustavson School of Business. \n\nSuccessful recipients must be willing to take part in the Working for a Better World Scholars network and be featured in the Peter B. Gustavson School of Business’ promotional material (photo and story).",
+    "deadline": "No application required",
+    "amount": "Varies | Number of awards: Varies",
+    "applicationRequired": false,
+    "departments": [
+      "Business"
+    ]
+  },
+  {
+    "id": 1351,
+    "name": "Rosalind Hulet Petch Memorial Scholarship in Writing*",
+    "description": "A scholarship is awarded to an outstanding student in Writing, who is continuing studies at the University of Victoria.\nApproval of the recipient will be made by the Senate Committee on Awards upon the recommendation of the Department of Writing.",
+    "deadline": "No application required",
+    "amount": "Varies | Number of awards: Varies",
+    "applicationRequired": false,
+    "departments": [
+      "Writing"
+    ]
+  },
+  {
+    "id": 1352,
+    "name": "W.R. (Bill) Gordon Scholarship*",
+    "description": "One or more scholarships are awarded to academically outstanding undergraduate third or fourth year students in a Major or Honours program in the Faculty of Science or the Faculty of Engineering, with preference being given to students in the Department of Mathematics and Statistics. \n\nStudents must have made a significant contribution to one or more aspects of university life through involvement in areas such as student athletic programs, student affairs or service on university bodies or committees.  \n\nApplications must be submitted to the Student Awards and Financial Aid Office via their online application by April 30th and must be accompanied by a letter or resume describing their contributions.\n\nApproval of the recipients will be made by the Senate Committee on Awards upon the recommendation of the Department of Mathematics and Statistics on behalf of the Faculty of Science.",
+    "deadline": "February 15 - April 30",
+    "amount": "Varies | Number of awards: Varies",
+    "applicationRequired": true,
+    "departments": [
+      "Engineering",
+      "Science",
+      "Computer Science",
+      "Mathematics and Statistics"
+    ]
+  },
+  {
+    "id": 1353,
+    "name": "Wuitchik Family Marine Sciences Undergraduate Award",
+    "description": "One or more awards of $2,000 each are given to entering or continuing undergraduate students from underrepresented groups in the Faculty of Science who have demonstrated an interest in marine sciences through course work, co-op or work experience. Preference will be given to students doing, or planning to do, marine sciences field work. \n\nStudents must submit a letter of application (max 300 words) explaining their passion for marine sciences and the opportunities this award would allow them to pursue.\n \nIf no applicants meet these criteria, the Award will be given to student(s) from underrepresented minorities in the Faculty of Science. A student may only receive this award once.\n\nApproval of the recipient(s) will be made by the Senate Committee on Awards upon recommendation of the Faculty of Science.",
+    "deadline": "February 15 - April 30",
+    "amount": "Varies | Number of awards: Varies",
+    "applicationRequired": true,
+    "departments": [
+      "Science",
+      "Earth and Ocean Sciences"
+    ]
+  },
+  {
+    "id": 1354,
+    "name": "Xa7limut (Ha-lay-mut) Jack Campo Indigenous Law Award",
+    "description": "One or more awards of at least $5,000 each are given to continuing, undergraduate Indigenous students in the JD/JID program in the Faculty of Law. Approval of the recipient(s) will be made by the Senate Committee on Awards upon the recommendation of the Faculty of Law.",
+    "deadline": "No application required",
+    "amount": "Varies | Number of awards: Varies",
+    "applicationRequired": false,
+    "departments": [
+      "Law"
+    ]
+  },
+  {
+    "id": 1355,
+    "name": "Youson Vikes Soccer Annual Award",
+    "description": "One or more awards are given to undergraduate and graduate students who compete on the Vikes Men’s or Women’s Varsity Soccer team at the University of Victoria. Award recipients must meet all U SPORTS eligibility requirements. Award recipients will be selected on the basis of their ability to combine academic achievement and citizenship with team work ethic commitment and performance criteria by the Director, Varsity Performance Sport, in consultation with the Varsity Head Coach. Approval of the recipients will be made by the Senate Committee on Awards upon the recommendation of the Department of Wellness, Recreation and Athletics.",
+    "deadline": "No application required",
+    "amount": "Varies | Number of awards: Varies",
+    "applicationRequired": false,
+    "departments": [
+      "Available to all"
+    ]
+  },
+  {
+    "id": 1356,
+    "name": "Zena and Chaim Katz Family Travel Award for Holocaust Studies*",
+    "description": "All registered undergraduate students in the bi-annual I-Witness Field School will receive a travel award to assist with the travel costs of the field school (travel to, from and within Europe). Award amounts will be determined by the director of the I-Witness Field School based on available funding.",
+    "deadline": "No application required",
+    "amount": "Varies | Number of awards: Varies",
+    "applicationRequired": false,
+    "departments": [
+      "Germanic and Slavic Studies"
+    ]
+  }
+]
+
+Return the JSON array now:
