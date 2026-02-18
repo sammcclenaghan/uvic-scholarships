@@ -260,7 +260,7 @@ export function ScholarshipSearch({
             autoComplete="off"
             autoCorrect="off"
             spellCheck={false}
-            className="block w-full rounded-lg border border-gray-200 bg-white py-2 pl-9 pr-3 text-base tracking-[-0.01em] text-gray-950 outline-none placeholder:text-gray-400 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 dark:placeholder:text-gray-500 sm:text-sm"
+            className="block w-full rounded-lg border border-gray-300 bg-white py-2 pl-9 pr-3 text-base tracking-[-0.01em] text-gray-950 outline-none placeholder:text-gray-400 hover:border-[#A8A8A8] focus:border-[#A8A8A8] dark:border-gray-600 dark:bg-gray-900 dark:text-gray-100 dark:placeholder:text-gray-500 dark:hover:border-white dark:focus:border-white sm:text-sm"
           />
         </div>
       </div>
