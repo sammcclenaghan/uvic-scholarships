@@ -33,10 +33,10 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex flex-1 items-center justify-center px-6">
+      <main className="flex flex-1 items-center justify-center px-4">
         <div className="w-full max-w-2xl space-y-6 text-center">
           <div className="space-y-3">
-            <p className="text-[2.25rem] font-bold leading-[1.1] tracking-[-0.04em] text-gray-950 md:text-5xl">
+            <p className="text-[2.25rem] font-bold leading-[1.1] tracking-[-0.04em] text-gray-950 md:text-5xl" style={{ wordSpacing: "-0.04em" }}>
               Find scholarships fast
             </p>
             <p className="text-[2.25rem] font-bold leading-[1.1] tracking-[-0.04em] text-gray-400 md:text-5xl">
