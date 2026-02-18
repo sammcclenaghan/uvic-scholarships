@@ -26,16 +26,10 @@ body {
   color: var(--color-gray-900);
 }
 
-/* Focus-visible: consistent keyboard focus rings across all interactive elements */
-:focus-visible {
-  outline: 2px solid var(--color-gray-900);
-  outline-offset: 2px;
-}
-
-input:focus-visible,
-select:focus-visible {
-  outline: 2px solid var(--color-gray-900);
-  outline-offset: 0px;
+/* Suppress browser focus outlines on styled form controls */
+input:focus,
+select:focus {
+  outline: none;
 }
 
 /* Reduced motion: respect user preferences */

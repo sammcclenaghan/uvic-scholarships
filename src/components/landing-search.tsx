@@ -57,7 +57,7 @@ export function LandingSearch() {
         autoComplete="off"
         autoCorrect="off"
         spellCheck={false}
-        className="block w-full rounded-lg border border-gray-300 bg-white py-2.5 pl-10 pr-4 text-sm tracking-[-0.01em] text-gray-950 outline-none transition-colors placeholder:text-gray-400 focus:border-gray-500"
+        className="block w-full rounded-lg border border-gray-300 bg-white py-2.5 pl-10 pr-4 text-sm tracking-[-0.01em] text-gray-950 outline-none placeholder:text-gray-400"
       />
     </form>
   );

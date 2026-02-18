@@ -188,7 +188,7 @@ export function ScholarshipSearch({
               autoComplete="off"
               autoCorrect="off"
               spellCheck={false}
-              className="block w-full rounded-md border border-gray-200 bg-white py-1.5 pl-9 pr-8 text-sm tracking-[-0.01em] text-gray-950 outline-none transition-colors placeholder:text-gray-400 focus:border-gray-400"
+              className="block w-full rounded-md border border-gray-200 bg-white py-1.5 pl-9 pr-8 text-sm tracking-[-0.01em] text-gray-950 outline-none placeholder:text-gray-400"
             />
             <div className="absolute inset-y-0 right-0 flex items-center pr-2">
               <kbd className="rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 font-mono text-[10px] text-gray-400">
@@ -330,7 +330,7 @@ function FilterPill({
       className={`w-auto shrink-0 appearance-none whitespace-nowrap rounded-full border px-3 py-1.5 text-[13px] outline-none transition-colors ${
         active
           ? "border-gray-400 bg-white text-gray-900"
-          : "border-gray-200 bg-white text-gray-600 hover:border-gray-400"
+          : "border-gray-200 bg-white text-gray-600"
       }`}
     >
       <option value="">{label}</option>
