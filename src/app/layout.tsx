@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "UVic Scholarships",
+  title: "Scholarships",
   description:
     "Search 1,300+ University of Victoria undergraduate scholarships and awards.",
 };

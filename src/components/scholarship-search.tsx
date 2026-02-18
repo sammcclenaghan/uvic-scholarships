@@ -154,7 +154,7 @@ export function ScholarshipSearch({
     <div className="flex h-dvh flex-col overflow-hidden bg-gray-50">
       <header className="sticky top-0 z-30 flex h-14 w-full shrink-0 items-center gap-4 border-b border-gray-200 bg-white/90 px-5 backdrop-blur">
         <a href="/" className="shrink-0 text-[15px] font-semibold tracking-[-0.01em] text-gray-950">
-          UVic Scholarships
+          Scholarships
         </a>
 
         <div className="min-w-0 flex-1">
@@ -206,12 +206,12 @@ export function ScholarshipSearch({
             Browse all
           </a>
           <a
-            href="https://www.uvic.ca/safa/scholarships/"
+            href="https://www.uvic.ca/scholarships/"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden shrink-0 items-center gap-1 text-[13px] text-gray-400 transition-colors hover:text-gray-900 sm:inline-flex"
           >
-            UVic Scholarships
+            UVic
             <svg className="h-3 w-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M3.5 3H9V8.5M9 3L3 9" />
             </svg>
