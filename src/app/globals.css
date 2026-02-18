@@ -26,6 +26,13 @@ body {
   color: var(--color-gray-900);
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+    color: var(--color-gray-200);
+  }
+}
+
 /* Suppress browser focus outlines on styled form controls */
 input:focus,
 select:focus {
@@ -57,6 +64,15 @@ select:focus {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-gray-400);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-gray-700);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-600);
+  }
 }
 
 /* Remove search input browser styling */

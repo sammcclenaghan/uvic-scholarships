@@ -151,10 +151,10 @@ export function ScholarshipSearch({
   }, [filtered.length, startTransition]);
 
   return (
-    <div className="flex h-dvh flex-col overflow-hidden bg-gray-50">
-      <header className="sticky top-0 z-30 w-full shrink-0 border-b border-gray-200 bg-white/90 backdrop-blur">
+    <div className="flex h-dvh flex-col overflow-hidden bg-gray-50 dark:bg-black">
+      <header className="sticky top-0 z-30 w-full shrink-0 border-b border-gray-200 bg-white/90 backdrop-blur dark:border-gray-800 dark:bg-black/90">
         <div className="flex h-14 items-center gap-4 px-5">
-          <a href="/" className="shrink-0 text-[15px] font-semibold tracking-[-0.01em] text-gray-950">
+          <a href="/" className="shrink-0 text-[15px] font-semibold tracking-[-0.01em] text-gray-950 dark:text-gray-100">
             Scholarships
           </a>
 
@@ -189,10 +189,10 @@ export function ScholarshipSearch({
                 autoComplete="off"
                 autoCorrect="off"
                 spellCheck={false}
-                className="block w-full rounded-md border border-gray-200 bg-white py-1.5 pl-9 pr-8 text-sm tracking-[-0.01em] text-gray-950 outline-none placeholder:text-gray-400"
+                className="block w-full rounded-md border border-gray-200 bg-white py-1.5 pl-9 pr-8 text-sm tracking-[-0.01em] text-gray-950 outline-none placeholder:text-gray-400 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 dark:placeholder:text-gray-500"
               />
               <div className="absolute inset-y-0 right-0 flex items-center pr-2">
-                <kbd className="rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 font-mono text-[10px] text-gray-400">
+                <kbd className="rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 font-mono text-[10px] text-gray-400 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-500">
                   /
                 </kbd>
               </div>
@@ -202,7 +202,7 @@ export function ScholarshipSearch({
           <div className="ml-auto flex shrink-0 items-center gap-3">
             <a
               href="/search"
-              className="shrink-0 rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-[13px] font-medium text-gray-700 transition-colors hover:border-gray-400 hover:text-gray-950"
+              className="shrink-0 rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-[13px] font-medium text-gray-700 transition-colors hover:border-gray-400 hover:text-gray-950 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-gray-500 dark:hover:text-gray-100"
             >
               Browse all
             </a>
@@ -210,7 +210,7 @@ export function ScholarshipSearch({
               href="https://www.uvic.ca/scholarships/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden shrink-0 items-center gap-1 text-[13px] text-gray-400 transition-colors hover:text-gray-900 sm:inline-flex"
+              className="hidden shrink-0 items-center gap-1 text-[13px] text-gray-400 transition-colors hover:text-gray-900 dark:text-gray-500 dark:hover:text-gray-300 sm:inline-flex"
             >
               UVic
               <svg className="h-3 w-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -222,7 +222,7 @@ export function ScholarshipSearch({
 
       </header>
 
-      <div className="border-b border-gray-200 bg-white/80 px-5 py-3 sm:hidden">
+      <div className="border-b border-gray-200 bg-white/80 px-5 py-3 dark:border-gray-800 dark:bg-black/80 sm:hidden">
         <div className="relative">
           <label
             htmlFor="search-header-mobile"
@@ -251,12 +251,12 @@ export function ScholarshipSearch({
             autoComplete="off"
             autoCorrect="off"
             spellCheck={false}
-            className="block w-full rounded-lg border border-gray-200 bg-white py-2 pl-9 pr-3 text-base tracking-[-0.01em] text-gray-950 outline-none placeholder:text-gray-400 sm:text-sm"
+            className="block w-full rounded-lg border border-gray-200 bg-white py-2 pl-9 pr-3 text-base tracking-[-0.01em] text-gray-950 outline-none placeholder:text-gray-400 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 dark:placeholder:text-gray-500 sm:text-sm"
           />
         </div>
       </div>
 
-      <div className="border-b border-gray-200 bg-white/80 px-5 py-2.5 backdrop-blur">
+      <div className="border-b border-gray-200 bg-white/80 px-5 py-2.5 backdrop-blur dark:border-gray-800 dark:bg-black/80">
         <div className="mx-auto flex max-w-3xl items-center gap-2">
           <div className="flex items-center gap-2 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <FilterPill
@@ -297,7 +297,7 @@ export function ScholarshipSearch({
               <span>{scholarships.length.toLocaleString()} scholarships</span>
             ) : (
               <span>
-                <span className="text-gray-900">
+                <span className="text-gray-900 dark:text-gray-200">
                   {filtered.length.toLocaleString()}
                 </span>{" "}
                 of {scholarships.length.toLocaleString()}
@@ -320,7 +320,7 @@ export function ScholarshipSearch({
                     setFilters(EMPTY);
                     setSearchInput("");
                   }}
-                  className="mt-2 text-sm text-gray-900 underline decoration-gray-300 underline-offset-4 transition-colors hover:decoration-gray-900"
+                  className="mt-2 text-sm text-gray-900 underline decoration-gray-300 underline-offset-4 transition-colors hover:decoration-gray-900 dark:text-gray-200 dark:decoration-gray-600 dark:hover:decoration-gray-300"
                 >
                   Clear filters
                 </button>
@@ -328,7 +328,7 @@ export function ScholarshipSearch({
             </div>
           ) : (
             <>
-              <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
+              <div className="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-950">
                 {filtered.slice(0, visibleCount).map((s, i) => (
                   <ScholarshipCard
                     key={s.id}
@@ -366,8 +366,8 @@ function FilterPill({
       onChange={(e) => onChange(e.target.value)}
       className={`w-auto shrink-0 appearance-none whitespace-nowrap rounded-full border px-3 py-1.5 text-[13px] outline-none transition-colors ${
         active
-          ? "border-gray-400 bg-white text-gray-900"
-          : "border-gray-200 bg-white text-gray-600"
+          ? "border-gray-400 bg-white text-gray-900 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-200"
+          : "border-gray-200 bg-white text-gray-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-400"
       }`}
     >
       <option value="">{label}</option>

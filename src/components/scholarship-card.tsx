@@ -20,17 +20,17 @@ export function ScholarshipCard({ scholarship: s, isLast }: ScholarshipCardProps
   const enriched = s.enriched;
 
   return (
-    <div className={!isLast ? "border-b border-gray-100" : ""}>
+    <div className={!isLast ? "border-b border-gray-100 dark:border-gray-800" : ""}>
       {/* Row */}
       <button
         onClick={() => setOpen(!open)}
-        className="group flex w-full items-center justify-between gap-4 px-4 py-3 text-left transition-colors hover:bg-gray-50 sm:px-5"
+        className="group flex w-full items-center justify-between gap-4 px-4 py-3 text-left transition-colors hover:bg-gray-50 dark:hover:bg-gray-900 sm:px-5"
       >
         <div className="min-w-0 flex-1">
-          <p className="truncate text-sm font-medium text-gray-950">
+          <p className="truncate text-sm font-medium text-gray-950 dark:text-gray-100">
             {s.name}
           </p>
-          <p className="mt-0.5 truncate text-[13px] text-gray-400">
+          <p className="mt-0.5 truncate text-[13px] text-gray-400 dark:text-gray-500">
             {s.departments.join(", ") || "All departments"}
             {s.deadline && s.deadline !== "no application required" && (
               <> &middot; {s.deadline}</>
@@ -40,12 +40,12 @@ export function ScholarshipCard({ scholarship: s, isLast }: ScholarshipCardProps
 
         <div className="flex shrink-0 items-center gap-3">
           {auto && (
-            <span className="rounded-full border border-gray-200 px-2 py-0.5 text-[11px] font-medium text-gray-500">
+            <span className="rounded-full border border-gray-200 px-2 py-0.5 text-[11px] font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400">
               Auto
             </span>
           )}
           <span
-            className={`text-sm tabular-nums ${dollar ? "font-semibold text-gray-950" : "text-gray-400"}`}
+            className={`text-sm tabular-nums ${dollar ? "font-semibold text-gray-950 dark:text-gray-100" : "text-gray-400 dark:text-gray-500"}`}
           >
             {dollar || "Varies"}
           </span>
@@ -65,14 +65,14 @@ export function ScholarshipCard({ scholarship: s, isLast }: ScholarshipCardProps
 
       {/* Expanded detail */}
       {open && (
-        <div className="border-t border-gray-100 bg-gray-50/50 px-4 pb-5 pt-4 sm:px-5">
+        <div className="border-t border-gray-100 bg-gray-50/50 px-4 pb-5 pt-4 dark:border-gray-800 dark:bg-gray-900/50 sm:px-5">
           <div className="grid gap-5 sm:grid-cols-2">
             {/* Left */}
             <div>
-              <p className="text-[13px] leading-relaxed text-gray-600">
+              <p className="text-[13px] leading-relaxed text-gray-600 dark:text-gray-400">
                 {s.description}
               </p>
-              <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[12px] text-gray-400">
+              <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[12px] text-gray-400 dark:text-gray-500">
                 {s.awardType.map((t) => (
                   <span key={t}>{t}</span>
                 ))}
@@ -104,7 +104,7 @@ export function ScholarshipCard({ scholarship: s, isLast }: ScholarshipCardProps
                     </div>
                   ) : (
                     <div>
-                      <p className="mb-1.5 text-[11px] font-medium uppercase tracking-wider text-gray-400">
+                      <p className="mb-1.5 text-[11px] font-medium uppercase tracking-wider text-gray-400 dark:text-gray-500">
                         Requirements
                       </p>
                       {enriched.documents.length > 0 ? (
@@ -112,7 +112,7 @@ export function ScholarshipCard({ scholarship: s, isLast }: ScholarshipCardProps
                           {enriched.documents.map((doc, i) => (
                             <li
                               key={i}
-                              className="flex items-start gap-1.5 text-[13px] text-gray-600"
+                              className="flex items-start gap-1.5 text-[13px] text-gray-600 dark:text-gray-400"
                             >
                               <span className="mt-1.5 block h-1 w-1 shrink-0 rounded-full bg-gray-300" />
                               {doc}
@@ -147,7 +147,7 @@ export function ScholarshipCard({ scholarship: s, isLast }: ScholarshipCardProps
                     }
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-md bg-gray-900 px-3 py-1.5 text-[13px] font-medium text-white transition-colors hover:bg-gray-800"
+                    className="inline-flex items-center gap-1.5 rounded-md bg-gray-900 px-3 py-1.5 text-[13px] font-medium text-white transition-colors hover:bg-gray-800 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-200"
                   >
                     Apply
                     <svg className="h-3 w-3" viewBox="0 0 16 16" fill="currentColor">
@@ -160,7 +160,7 @@ export function ScholarshipCard({ scholarship: s, isLast }: ScholarshipCardProps
                     href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-md border border-gray-200 bg-white px-3 py-1.5 text-[13px] text-gray-600 transition-colors hover:border-gray-400 hover:text-gray-900"
+                    className="inline-flex items-center gap-1.5 rounded-md border border-gray-200 bg-white px-3 py-1.5 text-[13px] text-gray-600 transition-colors hover:border-gray-400 hover:text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:border-gray-500 dark:hover:text-gray-200"
                   >
                     Details
                     <svg
