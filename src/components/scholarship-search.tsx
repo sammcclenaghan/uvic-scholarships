@@ -251,7 +251,7 @@ export function ScholarshipSearch({
             autoComplete="off"
             autoCorrect="off"
             spellCheck={false}
-            className="block w-full rounded-lg border border-gray-200 bg-white py-2 pl-9 pr-3 text-sm tracking-[-0.01em] text-gray-950 outline-none placeholder:text-gray-400"
+            className="block w-full rounded-lg border border-gray-200 bg-white py-2 pl-9 pr-3 text-base tracking-[-0.01em] text-gray-950 outline-none placeholder:text-gray-400 sm:text-sm"
           />
         </div>
       </div>

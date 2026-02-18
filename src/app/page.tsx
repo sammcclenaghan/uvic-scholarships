@@ -65,11 +65,11 @@ export default function Home() {
                 <p className="text-[12px] text-gray-400">Auto-awarded</p>
               </a>
               <a
-                href="/search?q=financial%20need"
+                href="/search?awardType=Travel%20awards%20for%20continuing%20students"
                 className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-left transition-colors hover:border-gray-400"
               >
-                <p className="text-sm font-medium text-gray-900">Financial need</p>
-                <p className="text-[12px] text-gray-400">Need-based</p>
+                <p className="text-sm font-medium text-gray-900">Study abroad</p>
+                <p className="text-[12px] text-gray-400">Travel awards</p>
               </a>
             </div>
           </div>
