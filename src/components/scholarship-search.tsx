@@ -44,12 +44,14 @@ export function ScholarshipSearch({
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "/" && document.activeElement !== inputRef.current) {
-        e.preventDefault();
-        inputRef.current?.focus();
-      }
       if (e.key === "Escape" && document.activeElement === inputRef.current) {
         inputRef.current?.blur();
+        return;
+      }
+      if (document.activeElement === inputRef.current) return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      if (e.key === "/" || (e.key.length === 1 && !e.repeat)) {
+        inputRef.current?.focus();
       }
     };
     window.addEventListener("keydown", onKey);
