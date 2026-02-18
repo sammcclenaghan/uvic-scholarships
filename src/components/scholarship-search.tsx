@@ -50,7 +50,11 @@ export function ScholarshipSearch({
       }
       if (document.activeElement === inputRef.current) return;
       if (e.metaKey || e.ctrlKey || e.altKey) return;
-      if (e.key === "/" || (e.key.length === 1 && !e.repeat)) {
+      if (e.key === "Backspace") {
+        e.preventDefault();
+        setSearchInput((prev) => prev.slice(0, -1));
+        inputRef.current?.focus();
+      } else if (e.key === "/" || (e.key.length === 1 && !e.repeat)) {
         inputRef.current?.focus();
       }
     };
