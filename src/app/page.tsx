@@ -1,10 +1,12 @@
 import { LandingSearch } from "../components/landing-search";
 import { FilterMetadata } from "../lib/types";
 import metadataJson from "../../data/metadata.json";
+import gradMetadataJson from "../../data/graduate-metadata.json";
 
 export default function Home() {
   const meta = metadataJson as FilterMetadata;
-  const total = meta.total.toLocaleString();
+  const gradMeta = gradMetadataJson as FilterMetadata;
+  const total = (meta.total + gradMeta.total).toLocaleString();
 
   return (
     <div className="flex min-h-dvh flex-col bg-gray-50 dark:bg-black">
@@ -14,7 +16,7 @@ export default function Home() {
         </span>
         <div className="flex items-center gap-3">
           <a
-            href="/search"
+            href="/search/undergrad"
             className="rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-[13px] font-medium text-gray-700 transition-colors hover:border-gray-400 hover:text-gray-950 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-gray-500 dark:hover:text-gray-100"
           >
             Browse all
@@ -49,27 +51,34 @@ export default function Home() {
 
           <div className="mx-auto w-[min(520px,90vw)] space-y-4">
             <LandingSearch />
-            <div className="grid gap-2 sm:grid-cols-3">
+            <div className="grid gap-2 sm:grid-cols-2">
               <a
-                href="/search?awardType=Entrance%20scholarship"
+                href="/search/undergrad?awardType=Entrance%20scholarship"
                 className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-left transition-colors hover:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-gray-600"
               >
                 <p className="text-sm font-medium text-gray-900 dark:text-gray-200">First-year</p>
                 <p className="text-[12px] text-gray-400 dark:text-gray-500">Entrance awards</p>
               </a>
               <a
-                href="/search?applicationRequired=no"
+                href="/search/undergrad?applicationRequired=no"
                 className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-left transition-colors hover:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-gray-600"
               >
                 <p className="text-sm font-medium text-gray-900 dark:text-gray-200">No application</p>
                 <p className="text-[12px] text-gray-400 dark:text-gray-500">Auto-awarded</p>
               </a>
               <a
-                href="/search?awardType=Travel%20awards%20for%20continuing%20students"
+                href="/search/undergrad?awardType=Travel%20awards%20for%20continuing%20students"
                 className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-left transition-colors hover:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-gray-600"
               >
                 <p className="text-sm font-medium text-gray-900 dark:text-gray-200">Study abroad</p>
                 <p className="text-[12px] text-gray-400 dark:text-gray-500">Travel awards</p>
+              </a>
+              <a
+                href="/search/grad"
+                className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-left transition-colors hover:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-gray-600"
+              >
+                <p className="text-sm font-medium text-gray-900 dark:text-gray-200">Graduate</p>
+                <p className="text-[12px] text-gray-400 dark:text-gray-500">{gradMeta.total.toLocaleString()} awards</p>
               </a>
             </div>
           </div>

@@ -13,7 +13,7 @@ export function LandingSearch() {
     if (!trimmed) return;
 
     const handle = window.setTimeout(() => {
-      const next = `/search?q=${encodeURIComponent(trimmed)}`;
+      const next = `/search/undergrad?q=${encodeURIComponent(trimmed)}`;
       router.replace(next);
     }, SEARCH_DEBOUNCE_MS);
 
@@ -26,7 +26,7 @@ export function LandingSearch() {
         event.preventDefault();
         const trimmed = value.trim();
         if (!trimmed) return;
-        router.push(`/search?q=${encodeURIComponent(trimmed)}`);
+        router.push(`/search/undergrad?q=${encodeURIComponent(trimmed)}`);
       }}
       className="relative"
     >

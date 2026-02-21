@@ -9,6 +9,8 @@ const RESULTS_PAGE_SIZE = 50;
 interface Props {
   scholarships: Scholarship[];
   departments: string[];
+  level: "undergrad" | "grad";
+  awardTypeOptions: [string, string][];
   studentFocusOptions: string[];
   initialFilters?: Partial<ActiveFilters>;
 }
@@ -27,6 +29,8 @@ const QUERY_PARAM = "q";
 export function ScholarshipSearch({
   scholarships,
   departments,
+  level,
+  awardTypeOptions,
   studentFocusOptions,
   initialFilters,
 }: Props) {
@@ -167,8 +171,31 @@ export function ScholarshipSearch({
             Scholarships
           </a>
 
-          <div className="hidden min-w-0 flex-1 sm:block">
-            <div className="relative mx-auto max-w-xl">
+          <div className="flex shrink-0 gap-1 rounded-lg bg-gray-100 p-0.5 dark:bg-gray-900">
+            <a
+              href={`/search/undergrad${deferredSearch ? `?q=${encodeURIComponent(deferredSearch)}` : ""}`}
+              className={`rounded-md px-2.5 py-1 text-[13px] font-medium transition-colors ${
+                level === "undergrad"
+                  ? "bg-white text-gray-900 shadow-sm dark:bg-gray-800 dark:text-gray-100"
+                  : "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+              }`}
+            >
+              Undergrad
+            </a>
+            <a
+              href={`/search/grad${deferredSearch ? `?q=${encodeURIComponent(deferredSearch)}` : ""}`}
+              className={`rounded-md px-2.5 py-1 text-[13px] font-medium transition-colors ${
+                level === "grad"
+                  ? "bg-white text-gray-900 shadow-sm dark:bg-gray-800 dark:text-gray-100"
+                  : "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+              }`}
+            >
+              Graduate
+            </a>
+          </div>
+
+          <div className="pointer-events-none absolute inset-0 hidden items-center justify-center px-48 sm:flex">
+            <div className="pointer-events-auto relative w-full max-w-xl">
               <label
                 htmlFor="search-header"
                 className="absolute inset-y-0 left-0 flex items-center pl-3"
@@ -209,12 +236,6 @@ export function ScholarshipSearch({
           </div>
 
           <div className="ml-auto flex shrink-0 items-center gap-3">
-            <a
-              href="/search"
-              className="shrink-0 rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-[13px] font-medium text-gray-700 transition-colors hover:border-gray-400 hover:text-gray-950 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-gray-500 dark:hover:text-gray-100"
-            >
-              Browse all
-            </a>
             <a
               href="https://www.uvic.ca/scholarships/"
               target="_blank"
@@ -272,33 +293,33 @@ export function ScholarshipSearch({
               value={filters.awardType}
               onChange={(v) => set("awardType", v)}
               label="Type"
-              options={[
-                ["Entrance scholarship", "Entrance"],
-                ["In-course scholarships for continuing students", "In-course"],
-                ["Travel awards for continuing students", "Travel"],
-              ]}
+              options={awardTypeOptions}
             />
-            <FilterPill
-              value={filters.applicationRequired}
-              onChange={(v) => set("applicationRequired", v)}
-              label="Application"
-              options={[
-                ["no", "Not required"],
-                ["yes", "Required"],
-              ]}
-            />
+            {level === "undergrad" && (
+              <FilterPill
+                value={filters.applicationRequired}
+                onChange={(v) => set("applicationRequired", v)}
+                label="Application"
+                options={[
+                  ["no", "Not required"],
+                  ["yes", "Required"],
+                ]}
+              />
+            )}
             <FilterPill
               value={filters.department}
               onChange={(v) => set("department", v)}
               label="Department"
               options={departments.map((d) => [d, d])}
             />
-            <FilterPill
-              value={filters.studentFocus}
-              onChange={(v) => set("studentFocus", v)}
-              label="Focus"
-              options={studentFocusOptions.map((s) => [s, s])}
-            />
+            {studentFocusOptions.length > 0 && (
+              <FilterPill
+                value={filters.studentFocus}
+                onChange={(v) => set("studentFocus", v)}
+                label="Focus"
+                options={studentFocusOptions.map((s) => [s, s])}
+              />
+            )}
           </div>
 
           <div className="ml-auto shrink-0 text-[13px] text-gray-400">
