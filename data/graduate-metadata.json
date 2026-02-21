@@ -1,0 +1,234 @@
+{
+  "filters": [
+    {
+      "label": "Filter by specific type",
+      "type": "dropdown",
+      "values": [
+        "External awards",
+        "Gender-based",
+        "Indigenous students",
+        "Masters",
+        "Part-time studies",
+        "PhD",
+        "Students with disabilities",
+        "Undergraduate"
+      ]
+    },
+    {
+      "label": "Filter by department",
+      "type": "dropdown",
+      "values": [
+        {
+          "value": "Available to all",
+          "text": "Available to all"
+        },
+        {
+          "value": "Annual giving",
+          "text": "Annual giving"
+        },
+        {
+          "value": "Art History and Visual Studies",
+          "text": "Art History and Visual Studies"
+        },
+        {
+          "value": "Biochemistry and Microbiology",
+          "text": "Biochemistry and Microbiology"
+        },
+        {
+          "value": "Biology",
+          "text": "Biology"
+        },
+        {
+          "value": "Business",
+          "text": "Business"
+        },
+        {
+          "value": "Chemistry",
+          "text": "Chemistry"
+        },
+        {
+          "value": "Child and Youth Care",
+          "text": "Child and Youth Care"
+        },
+        {
+          "value": "Clinical and Counselling Psychology",
+          "text": "Clinical and Counselling Psychology"
+        },
+        {
+          "value": "Coastal Climate Solutions Leaders program",
+          "text": "Coastal Climate Solutions Leaders program"
+        },
+        {
+          "value": "Curriculum and Instruction",
+          "text": "Curriculum and Instruction"
+        },
+        {
+          "value": "Earth and Ocean Sciences",
+          "text": "Earth and Ocean Sciences"
+        },
+        {
+          "value": "Economics",
+          "text": "Economics"
+        },
+        {
+          "value": "Educational Psychology and Leadership Studies",
+          "text": "Educational Psychology and Leadership Studies"
+        },
+        {
+          "value": "Engineering and Computer Science",
+          "text": "Engineering and Computer Science"
+        },
+        {
+          "value": "English",
+          "text": "English"
+        },
+        {
+          "value": "Environmental Studies",
+          "text": "Environmental Studies"
+        },
+        {
+          "value": "Exercise Science Physical and Health Education",
+          "text": "Exercise Science, Physical and Health Education"
+        },
+        {
+          "value": "Faculty of Education",
+          "text": "Faculty of Education"
+        },
+        {
+          "value": "Faculty of Health",
+          "text": "Faculty of Health"
+        },
+        {
+          "value": "Fine Arts",
+          "text": "Fine Arts"
+        },
+        {
+          "value": "French",
+          "text": "French"
+        },
+        {
+          "value": "Gender Studies",
+          "text": "Gender Studies"
+        },
+        {
+          "value": "Geography",
+          "text": "Geography"
+        },
+        {
+          "value": "Germanic and Slavic Studies",
+          "text": "Germanic and Slavic Studies"
+        },
+        {
+          "value": "Greek and Roman Studies",
+          "text": "Greek and Roman Studies"
+        },
+        {
+          "value": "Health Information Science",
+          "text": "Health Information Science"
+        },
+        {
+          "value": "History",
+          "text": "History"
+        },
+        {
+          "value": "Human and Social Development",
+          "text": "Human and Social Development"
+        },
+        {
+          "value": "Humanities",
+          "text": "Humanities"
+        },
+        {
+          "value": "Indigenous Governance",
+          "text": "Indigenous Governance"
+        },
+        {
+          "value": "Institute on Aging and Lifelong Health",
+          "text": "Institute on Aging and Lifelong Health"
+        },
+        {
+          "value": "Law",
+          "text": "Law"
+        },
+        {
+          "value": "Library",
+          "text": "Library"
+        },
+        {
+          "value": "Linguistics",
+          "text": "Linguistics"
+        },
+        {
+          "value": "Mathematics and Statistics",
+          "text": "Mathematics and Statistics"
+        },
+        {
+          "value": "Medical Sciences",
+          "text": "Medical Sciences"
+        },
+        {
+          "value": "Music",
+          "text": "Music"
+        },
+        {
+          "value": "Nursing",
+          "text": "Nursing"
+        },
+        {
+          "value": "Pacific and Asian Studies",
+          "text": "Pacific and Asian Studies"
+        },
+        {
+          "value": "Philosophy",
+          "text": "Philosophy"
+        },
+        {
+          "value": "Physics and Astronomy",
+          "text": "Physics and Astronomy"
+        },
+        {
+          "value": "Political Science",
+          "text": "Political Science"
+        },
+        {
+          "value": "Psychology",
+          "text": "Psychology"
+        },
+        {
+          "value": "Public Administration",
+          "text": "Public Administration"
+        },
+        {
+          "value": "Public Health and Social Policy",
+          "text": "Public Health and Social Policy"
+        },
+        {
+          "value": "Social Sciences",
+          "text": "Social Sciences"
+        },
+        {
+          "value": "Social Work",
+          "text": "Social Work"
+        },
+        {
+          "value": "Sociology",
+          "text": "Sociology"
+        },
+        {
+          "value": "Theatre",
+          "text": "Theatre"
+        },
+        {
+          "value": "Visual Arts",
+          "text": "Visual Arts"
+        },
+        {
+          "value": "Writing",
+          "text": "Writing"
+        }
+      ]
+    }
+  ],
+  "total": 567,
+  "lastUpdated": "2026-02-21T07:03:12.900Z"
+}
