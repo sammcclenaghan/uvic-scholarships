@@ -85,10 +85,6 @@ export function ScholarshipSearch({
     []
   );
 
-  useEffect(() => {
-    setSearchInput(filters.search);
-  }, [filters.search]);
-
   const sentinelRef = useRef<HTMLDivElement>(null);
 
   const hasFilters = useMemo(
@@ -138,10 +134,12 @@ export function ScholarshipSearch({
     });
   }, [scholarships, filters, deferredSearch]);
 
-  // Reset visible count when filters change
+  /* eslint-disable react-hooks/set-state-in-effect */
+  // Reset pagination when filters change
   useEffect(() => {
     setVisibleCount(RESULTS_PAGE_SIZE);
   }, [deferredSearch, filters.awardType, filters.applicationRequired, filters.renewable, filters.studentFocus, filters.department]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   // Infinite scroll: load more when sentinel enters viewport
   useEffect(() => {
