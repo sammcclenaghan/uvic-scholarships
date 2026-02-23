@@ -51,7 +51,7 @@ export default function Home() {
 
           <div className="mx-auto w-[min(520px,90vw)] space-y-4">
             <LandingSearch />
-            <div className="grid gap-2 sm:grid-cols-2">
+            <div className="grid gap-2 sm:grid-cols-3">
               <a
                 href="/search/undergrad?awardType=Entrance%20scholarship"
                 className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-left transition-colors hover:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-gray-600"
@@ -63,15 +63,8 @@ export default function Home() {
                 href="/search/undergrad?applicationRequired=no"
                 className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-left transition-colors hover:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-gray-600"
               >
-                <p className="text-sm font-medium text-gray-900 dark:text-gray-200">No application</p>
+                <p className="text-sm font-medium text-gray-900 dark:text-gray-200">No essay required</p>
                 <p className="text-[12px] text-gray-400 dark:text-gray-500">Auto-awarded</p>
-              </a>
-              <a
-                href="/search/undergrad?awardType=Travel%20awards%20for%20continuing%20students"
-                className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-left transition-colors hover:border-gray-400 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-gray-600"
-              >
-                <p className="text-sm font-medium text-gray-900 dark:text-gray-200">Study abroad</p>
-                <p className="text-[12px] text-gray-400 dark:text-gray-500">Travel awards</p>
               </a>
               <a
                 href="/search/grad"
