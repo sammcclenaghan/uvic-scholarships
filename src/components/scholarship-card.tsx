@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Scholarship } from "../lib/types";
 
 interface ScholarshipCardProps {
@@ -15,15 +15,24 @@ function extractDollar(amount: string): string | null {
 
 export function ScholarshipCard({ scholarship: s, isLast }: ScholarshipCardProps) {
   const [open, setOpen] = useState(false);
+  const rowRef = useRef<HTMLDivElement>(null);
   const dollar = extractDollar(s.amount);
   const auto = s.applicationRequired === false;
   const enriched = s.enriched;
 
   return (
-    <div className={!isLast ? "border-b border-gray-100 dark:border-gray-800" : ""}>
+    <div ref={rowRef} className={!isLast ? "border-b border-gray-100 dark:border-gray-800" : ""}>
       {/* Row */}
       <button
-        onClick={() => setOpen(!open)}
+        onClick={() => {
+          const willOpen = !open;
+          setOpen(willOpen);
+          if (willOpen) {
+            requestAnimationFrame(() => {
+              rowRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            });
+          }
+        }}
         className="group flex w-full items-center justify-between gap-4 px-4 py-3 text-left transition-colors hover:bg-gray-50 dark:hover:bg-gray-900 sm:px-5"
       >
         <div className="min-w-0 flex-1">
