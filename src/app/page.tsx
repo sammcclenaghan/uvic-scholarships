@@ -47,6 +47,7 @@ export default function Home() {
             <p className="text-base font-normal text-gray-400 dark:text-gray-500">
               {total} awards. Start with a quick pick or search.
             </p>
+
           </div>
 
           <div className="mx-auto w-[min(520px,90vw)] space-y-4">

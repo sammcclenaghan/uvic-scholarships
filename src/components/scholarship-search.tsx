@@ -169,7 +169,7 @@ export function ScholarshipSearch({
             Scholarships
           </a>
 
-          <div className="flex shrink-0 gap-1 rounded-lg bg-gray-100 p-0.5 dark:bg-gray-900">
+          <div className="ml-auto flex shrink-0 gap-1 rounded-lg bg-gray-100 p-0.5 dark:bg-gray-900 sm:ml-0">
             <a
               href={`/search/undergrad${deferredSearch ? `?q=${encodeURIComponent(deferredSearch)}` : ""}`}
               className={`rounded-md px-2.5 py-1 text-[13px] font-medium transition-colors ${
