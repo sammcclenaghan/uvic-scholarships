@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ScholarshipSearch } from "../../../components/scholarship-search";
 import { ActiveFilters, FilterMetadata, Scholarship } from "../../../lib/types";
@@ -25,6 +26,32 @@ export const dynamicParams = false;
 
 export function generateStaticParams() {
   return [{ level: "undergrad" }, { level: "grad" }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ level: string }>;
+}): Promise<Metadata> {
+  const { level } = await params;
+  if (level === "grad") {
+    return {
+      title: "Graduate Scholarships & Funding",
+      description:
+        "Browse and filter UVic graduate scholarships, fellowships, and funding opportunities at the University of Victoria.",
+      alternates: {
+        canonical: "https://scholarships.smccl.ca/search/grad",
+      },
+    };
+  }
+  return {
+    title: "Undergraduate Scholarships & Awards",
+    description:
+      "Browse and filter 1,300+ UVic undergraduate scholarships, bursaries, and entrance awards at the University of Victoria.",
+    alternates: {
+      canonical: "https://scholarships.smccl.ca/search/undergrad",
+    },
+  };
 }
 
 export default async function SearchPage({

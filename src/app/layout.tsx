@@ -13,10 +13,44 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const BASE_URL = "https://scholarships.smccl.ca";
+
 export const metadata: Metadata = {
-  title: "Scholarships",
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default: "UVic Scholarships — Search 1,300+ University of Victoria Awards",
+    template: "%s | UVic Scholarships",
+  },
   description:
-    "Search 1,300+ University of Victoria undergraduate scholarships and awards.",
+    "Search and filter 1,300+ University of Victoria scholarships, bursaries, and awards. Find UVic entrance scholarships, in-course awards, and graduate funding.",
+  keywords: [
+    "UVic scholarships",
+    "University of Victoria scholarships",
+    "UVic awards",
+    "UVic bursaries",
+    "UVic entrance scholarships",
+    "UVic graduate funding",
+    "UVic financial aid",
+    "Victoria BC scholarships",
+  ],
+  openGraph: {
+    title: "UVic Scholarships — Search 1,300+ University of Victoria Awards",
+    description:
+      "Search and filter 1,300+ University of Victoria scholarships, bursaries, and awards. Find UVic entrance scholarships, in-course awards, and graduate funding.",
+    url: BASE_URL,
+    siteName: "UVic Scholarships",
+    locale: "en_CA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UVic Scholarships — Search 1,300+ University of Victoria Awards",
+    description:
+      "Search and filter 1,300+ University of Victoria scholarships, bursaries, and awards.",
+  },
+  alternates: {
+    canonical: BASE_URL,
+  },
 };
 
 export default function RootLayout({

@@ -3,12 +3,35 @@ import { FilterMetadata } from "../lib/types";
 import metadataJson from "../../data/metadata.json";
 import gradMetadataJson from "../../data/graduate-metadata.json";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "UVic Scholarships",
+  url: "https://scholarships.smccl.ca",
+  description:
+    "Search and filter 1,300+ University of Victoria scholarships, bursaries, and awards.",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate:
+        "https://scholarships.smccl.ca/search/undergrad?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export default function Home() {
   const meta = metadataJson as FilterMetadata;
   const gradMeta = gradMetadataJson as FilterMetadata;
   const total = (meta.total + gradMeta.total).toLocaleString();
 
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     <div className="flex min-h-dvh flex-col bg-gray-50 dark:bg-black">
       <header className="flex h-14 w-full items-center justify-between gap-4 border-b border-gray-200 bg-white/90 px-5 backdrop-blur dark:border-gray-800 dark:bg-black/90">
         <span className="text-[15px] font-semibold tracking-[-0.01em] text-gray-950 dark:text-gray-100">
@@ -91,5 +114,6 @@ export default function Home() {
         </a>
       </footer>
     </div>
+    </>
   );
 }
